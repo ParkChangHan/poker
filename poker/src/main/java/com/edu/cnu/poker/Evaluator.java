@@ -1,8 +1,6 @@
 package com.edu.cnu.poker;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by user on 2017-04-17.
@@ -11,19 +9,39 @@ public class Evaluator {
     Hand hand;
 
     public String evaluate(List<Card> cardList) {
-        Map<Suit,Integer> map = new HashMap<Suit,Integer>();
+        List<Suit> suitList = new ArrayList<Suit>();
+        List<Integer> rankList = new ArrayList<Integer>();
         for(Card card : cardList){
-            if(map.containsKey(card.getSuit())){
-                int count = map.get(card.getSuit());
-                map.put(card.getSuit(),++count);
-            }
-            else map.put(card.getSuit(),1);
+            suitList.add(card.getSuit());
+            rankList.add(card.getRank());
+        }
+        String result = genealogy(suitList,rankList);
+        return result;
+    }
+
+    private String genealogy(List<Suit> suitList,List<Integer> rankList) {
+        int Scount = 0;
+        int Hcount = 0;
+        int Dcount = 0;
+        int Ccount = 0;
+        Suit S = Suit.SPADES;
+        Suit H = Suit.HEARTS;
+        Suit D = Suit.DIAMONDS;
+        Suit C = Suit.CLUBS;
+
+        for(Suit key : suitList){
+            if(key == S) Scount++;
+            else if(key == H) Hcount++;
+            else if(key == D) Dcount++;
+            else if(key == C) Ccount++;
         }
 
-        for(Suit key : map.keySet()){
-            if(map.get(key) == 5){
-                return "FLUSH";
-            }
+        if(Scount == 5 || Hcount == 5 || Dcount == 5 || Ccount == 5){
+            Collections.sort(rankList);
+            if(rankList.get(0) == 1 && rankList.get(4) == 13) return "RTF";
+            else if (rankList.get(0) == 1 && rankList.get(4) == 5) return "BTF";
+           
+            return "FLUSH";
         }
         return null;
     }
