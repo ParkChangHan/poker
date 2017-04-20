@@ -25,6 +25,7 @@ public class Evaluator {
         int Dcount = 0;
         int Ccount = 0;
         int[] rankCount = new int[14];
+
         Suit S = Suit.SPADES;
         Suit H = Suit.HEARTS;
         Suit D = Suit.DIAMONDS;
@@ -56,10 +57,9 @@ public class Evaluator {
                 }
                 return "ONE_PAIR";
             }
-            else if(rankCount[i] ==3){
+            else if(rankCount[i] == 3){
                 for (int j = 1; j < 14; j++) {
                     if (rankCount[j] == 2) return "FULL_HOUSE";
-                    if (rankCount[j] == 3  && i != j) return "TWO_PAIR";
                 }
                 return "TRIPLE";
             }
