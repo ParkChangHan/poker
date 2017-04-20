@@ -46,9 +46,15 @@ public class Evaluator {
             else if (rankList.get(0) == 1 && rankList.get(4) == 5) return "BTF";
             return "FLUSH";
         }
-        
+
         for(int rank : rankCount){
             if(rank == 4) return "FOUR_CARD";
+            if(rank == 2) {
+                for (int rank_1 : rankCount) {
+                    if (rank_1 == 2) return "TWO_PAIR";
+                    if (rank_1 == 3) return "FULL_HOUSE";
+                }
+            }
         }
 
         return null;

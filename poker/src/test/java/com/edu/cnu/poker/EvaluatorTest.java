@@ -77,4 +77,30 @@ public class EvaluatorTest {
         String result = evaluator.evaluate(cardList);
         assertThat(result, is("FOUR_CARD"));
     }
+
+    @Test
+    public void 같은숫자가_3개와_2개가_있으면_풀하우스다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(1,Suit.SPADES),
+                new Card(3,Suit.CLUBS),
+                new Card(1,Suit.HEARTS),
+                new Card(3,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("FULL_HOUSE"));
+    }
+
+    @Test
+    public void 같은숫자2개가_2개있으면_투페어다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(1,Suit.SPADES),
+                new Card(3,Suit.CLUBS),
+                new Card(3,Suit.HEARTS),
+                new Card(2,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("TWO_PAIR"));
+    }
 }
