@@ -116,4 +116,16 @@ public class EvaluatorTest {
         String result = evaluator.evaluate(cardList);
         assertThat(result, is("ONE_PAIR"));
     }
+    @Test
+    public void 같은숫자3개가_있으면_트리플이다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(1,Suit.SPADES),
+                new Card(3,Suit.CLUBS),
+                new Card(1,Suit.HEARTS),
+                new Card(2,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("TRIPLE"));
+    }
 }
