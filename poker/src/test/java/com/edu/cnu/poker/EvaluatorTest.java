@@ -103,4 +103,17 @@ public class EvaluatorTest {
         String result = evaluator.evaluate(cardList);
         assertThat(result, is("TWO_PAIR"));
     }
+
+    @Test
+    public void 같은숫자2개가_1개있으면_원페어다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(1,Suit.CLUBS),
+                new Card(1,Suit.SPADES),
+                new Card(3,Suit.CLUBS),
+                new Card(4,Suit.HEARTS),
+                new Card(5,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("ONE_PAIR"));
+    }
 }

@@ -47,13 +47,21 @@ public class Evaluator {
             return "FLUSH";
         }
 
-        for(int rank : rankCount){
-            if(rank == 4) return "FOUR_CARD";
-            if(rank == 2) {
-                for (int rank_1 : rankCount) {
-                    if (rank_1 == 2) return "TWO_PAIR";
-                    if (rank_1 == 3) return "FULL_HOUSE";
+        for(int i = 1 ; i < 14 ; i++){
+            if(rankCount[i] == 4) return "FOUR_CARD";
+            else if(rankCount[i] == 2) {
+                for (int j = 1; j < 14; j++) {
+                    if (rankCount[j] == 2 && i != j) return "TWO_PAIR";
+                    if (rankCount[j] == 3) return "FULL_HOUSE";
                 }
+                return "ONE_PAIR";
+            }
+            else if(rankCount[i] ==3){
+                for (int j = 1; j < 14; j++) {
+                    if (rankCount[j] == 2) return "FULL_HOUSE";
+                    if (rankCount[j] == 3  && i != j) return "TWO_PAIR";
+                }
+                return "TRIPLE";
             }
         }
 
