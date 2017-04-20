@@ -24,6 +24,7 @@ public class Evaluator {
         int Hcount = 0;
         int Dcount = 0;
         int Ccount = 0;
+        int[] rankCount = new int[14];
         Suit S = Suit.SPADES;
         Suit H = Suit.HEARTS;
         Suit D = Suit.DIAMONDS;
@@ -35,14 +36,21 @@ public class Evaluator {
             else if(key == D) Dcount++;
             else if(key == C) Ccount++;
         }
+        for(int rank : rankList){
+            rankCount[rank]++;
+        }
 
         if(Scount == 5 || Hcount == 5 || Dcount == 5 || Ccount == 5){
             Collections.sort(rankList);
             if(rankList.get(0) == 1 && rankList.get(4) == 13) return "RTF";
             else if (rankList.get(0) == 1 && rankList.get(4) == 5) return "BTF";
-           
             return "FLUSH";
         }
+        
+        for(int rank : rankCount){
+            if(rank == 4) return "FOUR_CARD";
+        }
+
         return null;
     }
 }
