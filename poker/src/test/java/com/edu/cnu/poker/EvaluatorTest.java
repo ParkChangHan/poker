@@ -168,4 +168,17 @@ public class EvaluatorTest {
         String result = evaluator.evaluate(cardList);
         assertThat(result, is("STRAIGHT"));
     }
+
+    @Test
+    public void 다섯장의카드로_위의경우어디에도_해당하지않는경우_노페어(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(3,Suit.CLUBS),
+                new Card(1,Suit.SPADES),
+                new Card(5,Suit.CLUBS),
+                new Card(7,Suit.HEARTS),
+                new Card(9,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("NOPAIR"));
+    }
 }
