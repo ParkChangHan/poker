@@ -52,18 +52,18 @@ public class EvaluatorTest {
         assertThat(result, is("BTF"));
     }
 
-//    @Test
-//    public void SUIT가_5개같고_연속되면_스티플이다(){
-//        Evaluator evaluator = new Evaluator();
-//        List<Card> cardList = Arrays.asList(
-//                new Card(11,Suit.CLUBS),
-//                new Card(12,Suit.CLUBS),
-//                new Card(13,Suit.CLUBS),
-//                new Card(1,Suit.CLUBS),
-//                new Card(2,Suit.CLUBS));
-//        String result = evaluator.evaluate(cardList);
-//        assertThat(result, is("STF"));
-//    }
+    @Test
+    public void SUIT가_5개같고_연속되면_스티플이다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(13,Suit.CLUBS),
+                new Card(12,Suit.CLUBS),
+                new Card(3,Suit.CLUBS),
+                new Card(2,Suit.CLUBS),
+                new Card(1,Suit.CLUBS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("STF"));
+    }
 
     @Test
     public void 같은숫자가_4개면_포카드다(){
@@ -116,6 +116,7 @@ public class EvaluatorTest {
         String result = evaluator.evaluate(cardList);
         assertThat(result, is("ONE_PAIR"));
     }
+
     @Test
     public void 같은숫자3개가_있으면_트리플이다(){
         Evaluator evaluator = new Evaluator();

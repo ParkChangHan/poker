@@ -40,6 +40,28 @@ public class Evaluator {
         for(int rank : rankList){
             rankCount[rank]++;
         }
+        if(Scount == 5 || Hcount == 5 || Dcount == 5 || Ccount == 5) {
+            Collections.sort(rankList);
+            int i = 0;
+            int exception = 0;
+            for(int j = 0; j<5; j++){
+                if(rankList.get(j) > 10){
+                    exception = rankList.get(j);
+                    break;
+                }
+            }
+            while((rankList.get(i)+1 == rankList.get(i+1)) || (rankList.get(i)+9 == exception)){
+                if(rankList.get(i) <11 && rankList.get(i+1) <11){
+                    if((exception - rankList.get(i) < 9) && (exception - rankList.get(i) < 9)){
+                        break;
+                    }
+               }
+                    i++;
+                if(i == 4){
+                    return "STF";
+                }
+            }
+        }
 
         if(Scount == 5 || Hcount == 5 || Dcount == 5 || Ccount == 5){
             Collections.sort(rankList);
@@ -48,23 +70,21 @@ public class Evaluator {
             return "FLUSH";
         }
 
-        for(int i = 1 ; i < 14 ; i++){
-            if(rankCount[i] == 4) return "FOUR_CARD";
-            else if(rankCount[i] == 2) {
+        for(int i = 1 ; i < 14 ; i++) {
+            if (rankCount[i] == 4) return "FOUR_CARD";
+            else if (rankCount[i] == 2) {
                 for (int j = 1; j < 14; j++) {
                     if (rankCount[j] == 2 && i != j) return "TWO_PAIR";
                     if (rankCount[j] == 3) return "FULL_HOUSE";
                 }
                 return "ONE_PAIR";
-            }
-            else if(rankCount[i] == 3){
+            } else if (rankCount[i] == 3) {
                 for (int j = 1; j < 14; j++) {
                     if (rankCount[j] == 2) return "FULL_HOUSE";
                 }
                 return "TRIPLE";
             }
         }
-
-        return null;
+            return null;
     }
 }
