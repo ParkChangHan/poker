@@ -40,6 +40,12 @@ public class Evaluator {
         for(int rank : rankList){
             rankCount[rank]++;
         }
+        if(Scount != 5 && Hcount != 5 && Dcount != 5 && Ccount != 5) {
+            Collections.sort(rankList);
+            if (rankList.get(0) == 1 && rankList.get(1) == 10 && rankList.get(2) == 11 && rankList.get(3) == 12 && rankList.get(4) == 13) {
+                return "MOUNTAIN";
+            }
+        }
         if(Scount == 5 || Hcount == 5 || Dcount == 5 || Ccount == 5) {
             Collections.sort(rankList);
             int i = 0;

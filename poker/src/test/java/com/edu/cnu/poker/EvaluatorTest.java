@@ -129,4 +129,17 @@ public class EvaluatorTest {
         String result = evaluator.evaluate(cardList);
         assertThat(result, is("TRIPLE"));
     }
+
+    @Test
+    public void 모든무늬가_같지않지만_10부터A까지_있으면_마운틴이다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(10,Suit.CLUBS),
+                new Card(11,Suit.SPADES),
+                new Card(12,Suit.CLUBS),
+                new Card(1,Suit.HEARTS),
+                new Card(13,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("MOUNTAIN"));
+    }
 }
