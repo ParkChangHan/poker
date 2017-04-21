@@ -49,6 +49,30 @@ public class Evaluator {
                 return "BACK_STRAIGHT";
             }
         }
+        if(Scount != 5 && Hcount != 5 && Dcount != 5 && Ccount != 5) {
+            Collections.sort(rankList);
+            int i = 0;
+            int exception = 0;
+            for(int j = 0; j<5; j++){
+                if(rankList.get(j) > 10){
+                    exception = rankList.get(j);
+                    break;
+                }
+            }
+            while((rankList.get(i)+1 == rankList.get(i+1)) || (rankList.get(i)+9 == exception)){
+                if(exception != 0) {
+                    if (rankList.get(i) < 11 && rankList.get(i + 1) < 11) {
+                        if ((exception - rankList.get(i) < 9) && (exception - rankList.get(i+1) < 9)) {
+                            break;
+                        }
+                    }
+                }
+                i++;
+                if(i == 4){
+                    return "STRAIGHT";
+                }
+            }
+        }
         if(Scount == 5 || Hcount == 5 || Dcount == 5 || Ccount == 5) {
             Collections.sort(rankList);
             int i = 0;

@@ -155,4 +155,17 @@ public class EvaluatorTest {
         String result = evaluator.evaluate(cardList);
         assertThat(result, is("BACK_STRAIGHT"));
     }
+
+    @Test
+    public void 모든무늬가_같지않지만_카드5장이연달아있으면_스트레이트이다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(2,Suit.CLUBS),
+                new Card(1,Suit.SPADES),
+                new Card(13,Suit.CLUBS),
+                new Card(12,Suit.HEARTS),
+                new Card(11,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("STRAIGHT"));
+    }
 }
