@@ -142,4 +142,17 @@ public class EvaluatorTest {
         String result = evaluator.evaluate(cardList);
         assertThat(result, is("MOUNTAIN"));
     }
+
+    @Test
+    public void 모든무늬가_같지않지만_A부터5까지_있으면_백스트레이트이다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(4,Suit.CLUBS),
+                new Card(5,Suit.SPADES),
+                new Card(3,Suit.CLUBS),
+                new Card(1,Suit.HEARTS),
+                new Card(2,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("BACK_STRAIGHT"));
+    }
 }
