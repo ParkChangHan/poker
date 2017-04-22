@@ -11,7 +11,9 @@ public class Hand {
     private Deck deck;
     private PokerType pokerType;
     private List<Card> cardList;
+    public Hand(){
 
+    }
     public Hand(Deck deck, PokerType pokerType) {
         this.deck = deck;
         this.pokerType = pokerType;
