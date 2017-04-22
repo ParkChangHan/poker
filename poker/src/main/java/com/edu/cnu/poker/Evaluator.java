@@ -19,7 +19,7 @@ public class Evaluator {
         return result;
     }
 
-    private String genealogy(List<Suit> suitList,List<Integer> rankList) {
+    private String genealogy(List<Suit> suitList, List<Integer> rankList) {
         int Scount = 0;
         int Hcount = 0;
         int Dcount = 0;
@@ -37,7 +37,7 @@ public class Evaluator {
             else if(key == D) Dcount++;
             else if(key == C) Ccount++;
         }
-        for(int rank : rankList){
+        for(int rank : rankList) {
             rankCount[rank]++;
         }
         if(Scount != 5 && Hcount != 5 && Dcount != 5 && Ccount != 5) {
@@ -59,7 +59,7 @@ public class Evaluator {
                     break;
                 }
             }
-            while((rankList.get(i)+1 == rankList.get(i+1)) || (rankList.get(i)+9 == exception)){
+            while((rankList.get(i) + 1 == rankList.get(i + 1)) || (rankList.get(i) + 9 == exception)){
                 if(exception != 0) {
                     if (rankList.get(i) < 11 && rankList.get(i + 1) < 11) {
                         if ((exception - rankList.get(i) < 9) && (exception - rankList.get(i+1) < 9)) {
