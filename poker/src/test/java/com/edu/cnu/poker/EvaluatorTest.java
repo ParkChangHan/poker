@@ -52,18 +52,18 @@ public class EvaluatorTest {
         assertThat(result, is("BTF"));
     }
 
-//    @Test
-//    public void SUIT가_5개같고_연속되면_스티플이다(){
-//        Evaluator evaluator = new Evaluator();
-//        List<Card> cardList = Arrays.asList(
-//                new Card(11,Suit.CLUBS),
-//                new Card(12,Suit.CLUBS),
-//                new Card(13,Suit.CLUBS),
-//                new Card(1,Suit.CLUBS),
-//                new Card(2,Suit.CLUBS));
-//        String result = evaluator.evaluate(cardList);
-//        assertThat(result, is("STF"));
-//    }
+    @Test
+    public void SUIT가_5개같고_연속되면_스티플이다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(13,Suit.CLUBS),
+                new Card(12,Suit.CLUBS),
+                new Card(3,Suit.CLUBS),
+                new Card(2,Suit.CLUBS),
+                new Card(1,Suit.CLUBS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("STF"));
+    }
 
     @Test
     public void 같은숫자가_4개면_포카드다(){
@@ -116,6 +116,7 @@ public class EvaluatorTest {
         String result = evaluator.evaluate(cardList);
         assertThat(result, is("ONE_PAIR"));
     }
+
     @Test
     public void 같은숫자3개가_있으면_트리플이다(){
         Evaluator evaluator = new Evaluator();
@@ -127,5 +128,57 @@ public class EvaluatorTest {
                 new Card(2,Suit.DIAMONDS));
         String result = evaluator.evaluate(cardList);
         assertThat(result, is("TRIPLE"));
+    }
+
+    @Test
+    public void 모든무늬가_같지않지만_10부터A까지_있으면_마운틴이다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(10,Suit.CLUBS),
+                new Card(11,Suit.SPADES),
+                new Card(12,Suit.CLUBS),
+                new Card(1,Suit.HEARTS),
+                new Card(13,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("MOUNTAIN"));
+    }
+
+    @Test
+    public void 모든무늬가_같지않지만_A부터5까지_있으면_백스트레이트이다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(4,Suit.CLUBS),
+                new Card(5,Suit.SPADES),
+                new Card(3,Suit.CLUBS),
+                new Card(1,Suit.HEARTS),
+                new Card(2,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("BACK_STRAIGHT"));
+    }
+
+    @Test
+    public void 모든무늬가_같지않지만_카드5장이연달아있으면_스트레이트이다(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(2,Suit.CLUBS),
+                new Card(1,Suit.SPADES),
+                new Card(13,Suit.CLUBS),
+                new Card(12,Suit.HEARTS),
+                new Card(11,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("STRAIGHT"));
+    }
+
+    @Test
+    public void 다섯장의카드로_위의경우어디에도_해당하지않는경우_노페어(){
+        Evaluator evaluator = new Evaluator();
+        List<Card> cardList = Arrays.asList(
+                new Card(3,Suit.CLUBS),
+                new Card(1,Suit.SPADES),
+                new Card(5,Suit.CLUBS),
+                new Card(7,Suit.HEARTS),
+                new Card(9,Suit.DIAMONDS));
+        String result = evaluator.evaluate(cardList);
+        assertThat(result, is("NOPAIR"));
     }
 }
