@@ -4,12 +4,33 @@ package com.edu.cnu.poker;
  * Created by user on 2017-04-17.
  */
 public class Game {
+    Evaluator evaluator = new Evaluator();
     public Game(PokerType pokerType) {
         Deck deck = new Deck(1);
         Player p1 = new Player("Kim", deck);
         Player p2 = new Player("Ko", deck);
         print(p1, pokerType);
         print(p2, pokerType);
+
+        String player1 = evaluator.evaluate(p1.getMyHand().getCardList());
+        String player2 = evaluator.evaluate(p2.getMyHand().getCardList());
+
+        int p1_result = priority(player1);
+        int p2_result = priority(player2);
+
+        System.out.println("\t\tplayer1 is " +player1 + "     player2 is "+player2);
+        if(p1_result < p2_result) {
+            System.out.println("player1 Win!!!");
+            System.out.println();
+        }
+        else if(p1_result > p2_result) {
+            System.out.println("player2 Win!!!");
+            System.out.println();
+        }
+        else {
+            System.out.println("Draw!!! Let's Regame");
+            Game game = new Game(PokerType.FIVE);
+        }
     }
     private void print(Player player, PokerType pokerType){
         for(int i = 0 ; i < pokerType.getNumberOfCard() ; i++){
@@ -17,6 +38,7 @@ public class Game {
         }
         System.out.println();
     }
+
 
     private int priority(String level){
         if(level.equals("RTF")) return 1;

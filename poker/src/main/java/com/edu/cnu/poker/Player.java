@@ -1,13 +1,16 @@
 package com.edu.cnu.poker;
 
 import java.util.List;
-
 /**
  * Created by user on 2017-04-17.
  */
 public class Player {
         private String name;
-        private Hand myHand;
+
+    public Hand getMyHand() {
+        return myHand;
+    }
+    private Hand myHand;
 
         public Player(String name, Deck deck) {
             this.name = name;

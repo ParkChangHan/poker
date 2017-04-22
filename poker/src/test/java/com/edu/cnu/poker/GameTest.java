@@ -11,6 +11,6 @@ import static org.junit.Assert.assertThat;
 public class GameTest {
     @Test
     public void 첫번째_Game_을_테스트해보자(){
-        Game test1 = new Game();
+        Game test1 = new Game(PokerType.SEVEN);
     }
 }
