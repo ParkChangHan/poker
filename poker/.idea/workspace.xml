@@ -46,24 +46,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/edu/cnu/poker/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            <state relative-caret-position="23">
+              <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
               <folding>
-                <element signature="e#951#952#0" expanded="true" />
-                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#984#985#0" expanded="true" />
+                <element signature="e#1020#1021#0" expanded="true" />
+                <element signature="e#1065#1066#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EvaluatorTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EvaluatorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/edu/cnu/poker/EvaluatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="181" column="34" lean-forward="false" selection-start-line="181" selection-start-column="34" selection-end-line="181" selection-end-column="34" />
+            <state relative-caret-position="277">
+              <caret line="164" column="40" lean-forward="true" selection-start-line="164" selection-start-column="40" selection-end-line="164" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,8 +155,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/edu/cnu/poker/Card.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edu/cnu/poker/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edu/cnu/poker/Evaluator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/edu/cnu/poker/Game.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/edu/cnu/poker/EvaluatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/edu/cnu/poker/Game.java" />
       </list>
     </option>
   </component>
@@ -658,9 +660,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EvaluatorTest - 2017.04.21 at 17h 32m 21s.xml">
-      <configuration name="EvaluatorTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EvaluatorTest - 2017.04.21 at 17h 34m 28s.xml">
       <configuration name="EvaluatorTest" configurationId="JUnit" />
     </history-entry>
@@ -680,6 +679,9 @@
       <configuration name="EvaluatorTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="EvaluatorTest - 2017.04.22 at 17h 07m 08s.xml">
+      <configuration name="EvaluatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EvaluatorTest - 2017.04.22 at 17h 15m 19s.xml">
       <configuration name="EvaluatorTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="EvaluatorTest_다섯장의카드로_위의경우어디에도_해당하지않는경우_노페어 - 2017.04.21 at 12h 05m 38s.xml">
@@ -845,8 +847,10 @@
         <state relative-caret-position="115">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -909,8 +913,10 @@
         <state relative-caret-position="115">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -974,8 +980,10 @@
         <state relative-caret-position="115">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1143,23 +1151,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edu/cnu/poker/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/edu/cnu/poker/EvaluatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        <state relative-caret-position="277">
+          <caret line="164" column="40" lean-forward="true" selection-start-line="164" selection-start-column="40" selection-end-line="164" selection-end-column="40" />
           <folding>
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/edu/cnu/poker/EvaluatorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edu/cnu/poker/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="181" column="34" lean-forward="false" selection-start-line="181" selection-start-column="34" selection-end-line="181" selection-end-column="34" />
+        <state relative-caret-position="23">
+          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
           </folding>
         </state>
       </provider>

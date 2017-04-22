@@ -4,10 +4,14 @@ package com.edu.cnu.poker;
  * Created by user on 2017-04-17.
  */
 public class Game {
-    Deck deck = new Deck(1);
+
     Evaluator evaluator = new Evaluator();
-    Player p1 = new Player(deck);
-    Player p2 = new Player(deck);
+
+    public Game(){
+        Deck deck = new Deck(1);
+        Player p1 = new Player(deck);
+        Player p2 = new Player(deck);
+    }
 
 
     private int priority(String level){
@@ -23,8 +27,11 @@ public class Game {
         else if(level.equals("TRIPLE")) return 10;
         else if(level.equals("TWO_PAIR")) return 11;
         else if(level.equals("ONE_PAIR")) return 12;
-
         return 13;
+    }
+
+    private void print(Player player){
+        System.out.println();
     }
 
     public static void main(String[] args){
