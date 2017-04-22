@@ -8,8 +8,8 @@ public class Game {
 
     public Game(PokerType pokerType){
         Deck deck = new Deck(1);
-        Player p1 = new Player(deck);
-        Player p2 = new Player(deck);
+        Player p1 = new Player(deck,pokerType);
+        Player p2 = new Player(deck,pokerType);
         print(p1,pokerType);
         print(p2,pokerType);
 
