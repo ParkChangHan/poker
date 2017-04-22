@@ -118,6 +118,6 @@ public class Evaluator {
                 return "TRIPLE";
             }
         }
-            return "NOPAIR";
+            return "NO_PAIR";
     }
 }

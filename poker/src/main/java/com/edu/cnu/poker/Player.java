@@ -8,5 +8,4 @@ public class Player {
     public Player(Deck deck){
         hand = new Hand(deck,PokerType.FIVE);
     }
-
 }
