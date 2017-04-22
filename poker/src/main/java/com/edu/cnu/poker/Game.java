@@ -22,14 +22,17 @@ public class Game {
         System.out.println("\t\tplayer1 is " +player1 + "     player2 is "+player2);
         if(p1_result < p2_result) {
             System.out.println("player1 Win!!!");
+            System.out.println();
         }
         else if(p1_result > p2_result) {
             System.out.println("player2 Win!!!");
+            System.out.println();
         }
         else {
             System.out.println("Draw!!! Let's Regame");
             Game game = new Game(PokerType.FIVE);
         }
+
     }
 
 
