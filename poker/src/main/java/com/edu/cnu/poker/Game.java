@@ -19,8 +19,13 @@ public class Game {
         int p1_result = priority(player1);
         int p2_result = priority(player2);
 
-        if(p1_result < p2_result) System.out.println("player1 Win!!!");
-        else if(p1_result > p2_result) System.out.println("player2 Win!!!");
+        System.out.println("\t\tplayer1 is " +player1 + "     player2 is "+player2);
+        if(p1_result < p2_result) {
+            System.out.println("player1 Win!!!");
+        }
+        else if(p1_result > p2_result) {
+            System.out.println("player2 Win!!!");
+        }
         else {
             System.out.println("Draw!!! Let's Regame");
             Game game = new Game(PokerType.FIVE);
@@ -48,9 +53,10 @@ public class Game {
         for(int i = 0 ; i < pokerType.getNumberOfCard() ; i++){
             System.out.print(player.getCard(i) + ", ");
         }
+        System.out.println();
     }
 
-    public static void main(String[] args){
-        Game game = new Game(PokerType.FIVE);
-    }
+//    public static void main(String[] args){
+//        Game game = new Game(PokerType.FIVE);
+//    }
 }
