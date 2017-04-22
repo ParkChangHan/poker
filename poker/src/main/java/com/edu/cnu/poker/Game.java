@@ -18,6 +18,7 @@ public class Game {
         }
         p1.showCards();
         p2.showCards();
+        System.out.println("a");
     }
     
 
