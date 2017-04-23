@@ -8,7 +8,8 @@ import org.junit.Test;
 
 public class GameTest {
     @Test
-    public void 첫번째_게임_테스트(){
+    public void 첫번째_테스트(){
         Game game = new Game(PokerType.FIVE);
     }
+
 }
