@@ -58,8 +58,4 @@ public class Game {
         }
         System.out.println();
     }
-
-//    public static void main(String[] args){
-//        Game game = new Game(PokerType.FIVE);
-//    }
 }

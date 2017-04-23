@@ -5,6 +5,7 @@ import java.util.List;
 /**
  * Created by user on 2017-04-17.
  */
+
 public class Player {
     Hand hand;
     public Player(Deck deck, PokerType pokerType){
