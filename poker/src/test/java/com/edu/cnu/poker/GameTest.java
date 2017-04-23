@@ -12,4 +12,14 @@ public class GameTest {
         Game game = new Game(PokerType.FIVE);
     }
 
+    @Test
+    public void 두번째_테스트(){
+        Game game = new Game(PokerType.FIVE);
+    }
+
+    @Test
+    public void 세번째_테스트(){
+        Game game = new Game(PokerType.FIVE);
+    }
+
 }
