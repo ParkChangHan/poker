@@ -1,18 +1,24 @@
 package com.edu.cnu.poker;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by user on 2017-04-17.
  */
 public class Player {
     ArrayList<Card> list = new ArrayList<Card>();
+    Hand hand;
 
-    public void getCard(Card card){
+    public Player(PokerType pokertype, Deck deck){
+        hand = new Hand(deck, pokertype);
+    }
+    public void getCard(Card card) {
         list.add(card);
+
     }
 
-    public void showCards(){
-        System.out.println(list);
+    public int showCards(){
+        return hand.getTotalCard();
     }
 }
