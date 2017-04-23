@@ -10,7 +10,7 @@ public class Hand {
 
     private Deck deck;
     private PokerType pokerType;
-    private List<Card> cardList;
+    private ArrayList<Card> cardList;
 
     public Hand(Deck deck, PokerType pokerType) {
         this.deck = deck;
@@ -21,7 +21,11 @@ public class Hand {
         }
     }
 
-    public List<Card> getTotalCard() {
+    public ArrayList<Card> CardList(){
         return cardList;
+    }
+
+    public int getTotalCard() {
+        return cardList.size();
     }
 }

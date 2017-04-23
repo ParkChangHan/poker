@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class GameTest {
     @Test
-    public void 다섯장의_카드_출력확인(){
-        Game game = new Game();
+    public void 첫번째_게임_테스트(){
+        Game game = new Game(PokerType.FIVE);
     }
 }
