@@ -30,7 +30,7 @@ public class Game {
         }
         else {
             System.out.println("Draw!!! Let's Regame");
-            Game game = new Game(PokerType.FIVE);
+            Game game = new Game(pokerType);
         }
 
     }
