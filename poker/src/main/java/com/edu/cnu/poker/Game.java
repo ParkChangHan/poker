@@ -18,11 +18,11 @@ public class Game {
         player1.hand.getTotalCard();
         player2.hand.getTotalCard();
 
-        int resultOfPlayer1 = PokerLevel(evaluator.evaluate(player1.hand.getTotalCard()));
-        int resultOfPlayer2 = PokerLevel(evaluator.evaluate(player2.hand.getTotalCard()));
+        int resultOfPlayer1 = PokerLevel(evaluator.evaluate(player1.hand.CardList()));
+        int resultOfPlayer2 = PokerLevel(evaluator.evaluate(player2.hand.CardList()));
 
-        System.out.println("PLAYER 1 :" + evaluator.evaluate(player1.hand.getTotalCard()));
-        System.out.println("PLAYER 2 :" + evaluator.evaluate(player1.hand.getTotalCard()));
+        System.out.println("PLAYER 1 :" + evaluator.evaluate(player1.hand.CardList()));
+        System.out.println("PLAYER 2 :" + evaluator.evaluate(player1.hand.CardList()));
 
         if(resultOfPlayer1 > resultOfPlayer2){
             System.out.println("WINNER IS <<<PLYAER 1>>>");

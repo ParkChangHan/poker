@@ -18,6 +18,6 @@ public class Player {
     }
 
     public List<Card> showCards(){
-        return hand.getTotalCard();
+        return hand.CardList();
     }
 }
