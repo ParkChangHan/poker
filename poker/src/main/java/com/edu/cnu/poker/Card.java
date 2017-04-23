@@ -20,4 +20,9 @@ public class Card implements Comparable<Card>{
     public int compareTo(Card o) {
         return this.getRank()-o.getRank();
     }
+
+    public String toString(){
+        StringBuffer buf = new StringBuffer(rank+" "+suit);
+        return buf+"";
+    }
 }

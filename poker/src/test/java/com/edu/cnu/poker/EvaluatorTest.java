@@ -179,6 +179,6 @@ public class EvaluatorTest {
                 new Card(7,Suit.HEARTS),
                 new Card(9,Suit.DIAMONDS));
         String result = evaluator.evaluate(cardList);
-        assertThat(result, is("NOPAIR"));
+        assertThat(result, is("NO_PAIR"));
     }
 }
