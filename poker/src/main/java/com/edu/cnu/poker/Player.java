@@ -15,10 +15,9 @@ public class Player {
     }
     public void getCard(Card card) {
         list.add(card);
-
     }
 
-    public int showCards(){
+    public List<Card> showCards(){
         return hand.getTotalCard();
     }
 }
