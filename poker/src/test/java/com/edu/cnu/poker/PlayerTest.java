@@ -14,7 +14,7 @@ public class PlayerTest {
         Deck deck = new Deck(1);
         Hand hand = new Hand(deck,PokerType.FIVE);
         Player player = new Player(hand);
-        int result = player.getCardList();
+        int result = player.getCardListSize();
         assertThat(result,is(5));
     }
 
@@ -23,7 +23,7 @@ public class PlayerTest {
         Deck deck = new Deck(1);
         Hand hand = new Hand(deck,PokerType.SEVEN);
         Player player = new Player(hand);
-        int result = player.getCardList();
+        int result = player.getCardListSize();
         assertThat(result,is(7));
     }
 }

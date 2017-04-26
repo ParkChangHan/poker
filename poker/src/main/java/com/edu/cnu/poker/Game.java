@@ -23,18 +23,30 @@ public class Game {
         player1 = new Player(p1_hand);
         player2 = new Player(p2_hand);
 
+        player1.result = evaluator.evaluate(player1.hand.getCardList());
+        player2.result = evaluator.evaluate(player2.hand.getCardList());
+
         PrintStart();
-        PrintPlayer(player1);
-        PrintPlayer(player2);
 
-    }
+        int p1_result = priority(player1.result);
+        int p2_result = priority(player2.result);
 
-    private void PrintPlayer(Player player) {
-
+        if(p1_result > p2_result){
+            System.out.println("<<< Player1 Win!!! >>>");
+        }
+        else if(p1_result < p2_result){
+            System.out.println("<<< Player2 Win!!! >>>");
+        }
+        else {
+            System.out.println("<<< Draw!!! Restart Game!!! >>>");
+            Game game = new Game(pokerType);
+        }
     }
 
     private void PrintStart(){
         System.out.println("<<< 게임을 시작합니다 >>>");
+        System.out.println("Player 1 : " + player1.hand.getCardList() + "\t\tresult : " + player1.result);
+        System.out.println("Player 2 : " + player2.hand.getCardList() + "\t\tresult : " + player2.result);
     }
 
     private int priority(String a) {

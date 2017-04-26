@@ -7,12 +7,13 @@ import lombok.Data;
  */
 public class Player {
     Hand hand;
+    String result;
 
     public Player(Hand hand){
         this.hand = hand;
     }
 
-    public int getCardList(){
+    public int getCardListSize(){
         return hand.getCardList().size();
     }
 }
