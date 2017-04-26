@@ -9,6 +9,7 @@ import java.util.List;
 /**
  * Created by user on 2017-04-17.
  */
+
 public class Player {
 <<<<<<< HEAD
     ArrayList<Card> list = new ArrayList<Card>();

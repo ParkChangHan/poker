@@ -116,10 +116,13 @@ public class Game {
         }
         System.out.println();
     }
+<<<<<<< HEAD
 
 //    public static void main(String[] args){
 //        Game game = new Game(PokerType.FIVE);
 //    }
 >>>>>>> master
+=======
+>>>>>>> d39938143bf0e4b77ff6538f0ae42c83f9e00dd6
 }
 
