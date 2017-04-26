@@ -1,24 +1,21 @@
 package com.edu.cnu.poker;
 
-import java.util.ArrayList;
-import java.util.List;
+import lombok.Data;
 
 /**
  * Created by user on 2017-04-17.
  */
-
 public class Player {
-    ArrayList<Card> list = new ArrayList<Card>();
     Hand hand;
 
-    public Player(Deck deck, PokerType pokertype){
-        hand = new Hand(deck, pokertype);
-    }
-    public void getCard(Card card) {
-        list.add(card);
+    public Player(Hand hand){
+        this.hand = hand;
     }
 
-    public List<Card> showCards(){
-        return hand.CardList();
+    public void setHand(Hand hand){
+        this.hand = hand;
+    }
+    public Hand getHand(){
+        return hand;
     }
 }

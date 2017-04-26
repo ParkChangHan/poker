@@ -10,7 +10,6 @@ import lombok.Data;
 public class Card implements Comparable<Card>{
     private int rank;
     private Suit suit;
-
     public Card(int rank, Suit suit){
         this.rank = rank;
         this.suit = suit;
@@ -20,10 +19,5 @@ public class Card implements Comparable<Card>{
 
     public int compareTo(Card o) {
         return this.getRank()-o.getRank();
-    }
-
-    public String toString(){
-        StringBuffer buf = new StringBuffer(rank+" "+suit);
-        return buf+"";
     }
 }

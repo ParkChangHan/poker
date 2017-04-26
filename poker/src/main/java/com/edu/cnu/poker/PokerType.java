@@ -13,6 +13,7 @@ public enum PokerType {
         this.numberOfCard = numberOfCard;
     }
 
-    public int getNumberOfCard(){ return numberOfCard;
+    public int getNumberOfCard(){
+        return numberOfCard;
     }
 }
