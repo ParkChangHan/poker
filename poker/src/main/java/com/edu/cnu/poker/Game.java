@@ -11,37 +11,33 @@ import static org.junit.Assert.assertThat;
  */
 public class Game {
     Deck deck;
+    Hand p1_hand, p2_hand;
     Player player1;
     Player player2;
+    Evaluator evaluator = new Evaluator();
 
-    public Game(Deck deck, Player player1, Player player2){
-        this.deck = deck;
-        this.player1 = player1;
-        this.player2 = player2;
+    public Game(PokerType pokerType){
+        deck = new Deck(1);
+        p1_hand = new Hand(deck,pokerType);
+        p2_hand = new Hand(deck,pokerType);
+        player1 = new Player(p1_hand);
+        player2 = new Player(p2_hand);
+
+        PrintStart();
+        PrintPlayer(player1);
+        PrintPlayer(player2);
+
     }
 
-    public void start(){
-        System.out.println("게임을 시작합니다");
-        Evaluator evaluator1 = new Evaluator();
-        List<Card> cardList1 = player1.getHand().getCardList();
-        String result1 = evaluator1.evaluate(cardList1);
-        Evaluator evaluator2 = new Evaluator();
-        List<Card> cardList2 = player2.getHand().getCardList();
-        String result2 = evaluator1.evaluate(cardList2);
-        int first = this.priority(result1);
-        int second = this.priority(result2);
+    private void PrintPlayer(Player player) {
 
-        if(first > second){
-            System.out.println("player1이 이겼습니다");
-        }
-        else if(first < second){
-            System.out.println("player2가 이겼습니다");
-        }
-        else
-            System.out.println("비겼습니다");
     }
 
-    public int priority(String a) {
+    private void PrintStart(){
+        System.out.println("<<< 게임을 시작합니다 >>>");
+    }
+
+    private int priority(String a) {
         if (a == "MOUNTAIN")
             return 6;
         else if (a == "BACK_STRAIGHT")

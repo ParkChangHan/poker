@@ -12,10 +12,7 @@ public class Player {
         this.hand = hand;
     }
 
-    public void setHand(Hand hand){
-        this.hand = hand;
-    }
-    public Hand getHand(){
-        return hand;
+    public int getCardList(){
+        return hand.getCardList().size();
     }
 }
