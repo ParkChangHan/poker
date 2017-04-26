@@ -11,7 +11,11 @@ package com.edu.cnu.poker;
  */
 public class PokerApplication {
 
-    public static void main(String[] args) {
-        System.out.println("Hello Poker");
+    public static void main(String[] args)
+    {
+        System.out.println("-----------------Hello Poker-----------------");
+        System.out.println();
+        Game game = new Game(PokerType.FIVE);
     }
+
 }

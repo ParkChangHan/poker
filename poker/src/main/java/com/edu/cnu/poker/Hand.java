@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Hand {
     private PokerType pokerType;
-    private List<Card> cardList;
+    private ArrayList<Card> cardList;
 
     public Hand(Deck deck, PokerType pokerType) {
         this.pokerType = pokerType;
@@ -17,6 +17,14 @@ public class Hand {
             cardList.add(deck.drawCard());
         }
     }
+<<<<<<< HEAD
+
+    public ArrayList<Card> CardList(){
+        return cardList;
+    }
+
+=======
+>>>>>>> master
     public int getTotalCard() {
         return cardList.size();
     }
