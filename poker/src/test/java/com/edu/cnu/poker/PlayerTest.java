@@ -12,7 +12,7 @@ public class PlayerTest {
     @Test
     public void Player가_받은_카드의_수는_5이다(){
         Deck deck = new Deck(1);
-        Player player = new Player(PokerType.FIVE, deck);
+        Player player = new Player(deck,PokerType.FIVE);
         assertThat(player.hand.getTotalCard(), is(5));
     }
 }

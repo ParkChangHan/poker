@@ -12,8 +12,8 @@ public class Game {
     public Game(PokerType pokerType){
         Deck deck = new Deck(1);
         hand = new Hand(deck, pokerType);
-        player1 = new Player(pokerType, deck);
-        player2 = new Player(pokerType, deck);
+        player1 = new Player(deck, pokerType);
+        player2 = new Player(deck, pokerType);
 
         player1.hand.getTotalCard();
         player2.hand.getTotalCard();

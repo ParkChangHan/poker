@@ -22,4 +22,19 @@ public class GameTest {
         Game game = new Game(PokerType.FIVE);
     }
 
+    @Test
+    public void 네번째_테스트(){
+        Game game = new Game(PokerType.FIVE);
+    }
+
+    @Test
+    public void 다섯번째_테스트(){
+        Game game = new Game(PokerType.FIVE);
+    }
+
+    @Test
+    public void 여섯번째_테스트(){
+        Game game = new Game(PokerType.FIVE);
+    }
+
 }
